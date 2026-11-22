@@ -1,0 +1,10 @@
+# Temporary test files & logs
+test_shots/
+*.png.tmp
+test_edge.png
+test_run.html
+test_runner_*.html
+test_scenes.ps1
+run_all_tests.ps1
+.DS_Store
+Thumbs.db

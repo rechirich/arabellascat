@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Arabella's Cat - Petualangan Keseharian Arabella</title>
+  
+  <!-- iPad and Touch Optimization -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- Stardew Valley & Harvest Moon Style Dialogue CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Game Canvas & Frame Container -->
+  <div id="game-wrapper">
+
+    <!-- Top Left Button: Sound Toggle -->
+    <header id="hud-top-left">
+      <button id="btn-mute" class="hud-btn" title="Nyalakan / Matikan Musik">
+        🔊 Musik
+      </button>
+    </header>
+
+    <!-- Top Center: Location Pill (Bersih & Elegan) -->
+    <div id="hud-location-badge">
+      <span id="hud-location">Rumah Cluster 2-Lantai</span>
+    </div>
+
+    <!-- Top Right: Informasi Tanggal & Jam (Stardew Style) -->
+    <aside id="hud-clock-widget">
+      <div class="stardew-clock-box">
+        <div class="clock-dial" id="hud-dial">☀️</div>
+        <div class="clock-info">
+          <div class="clock-day" id="hud-day">Sabtu (Hari 1)</div>
+          <div class="clock-time" id="hud-time">06:00</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Viewport for Scenes & Backgrounds -->
+    <main id="scene-viewport">
+      <!-- Background Container -->
+      <div id="main-bg" class="scene-bg"></div>
+
+      <!-- Interactive Stage (Characters, Choices, Minigames) -->
+      <div id="interactive-stage"></div>
+
+      <!-- Stardew Valley / Harvest Moon Dialogue Template -->
+      <!-- Karakter setengah badan di sebelah kiri atas box percakapan -->
+      <section id="dialogue-container" role="dialog" aria-live="polite">
+        <!-- Character Half-Body Bust emerging above text box -->
+        <div id="speaker-bust-container">
+          <img id="speaker-bust-img" src="assets/characters/arabel_happy.png" alt="Karakter Berbicara" />
+        </div>
+
+        <!-- Dialogue Text Box -->
+        <div id="dialogue-box">
+          <!-- Speaker Name Tag -->
+          <div id="speaker-name-badge">Arabella</div>
+
+          <!-- Typewriter Text -->
+          <div id="dialogue-text">Selamat pagi Papa! Arabel siap mandi air hangat di bak mandi!</div>
+
+          <!-- Action Button & Blinking Heart Indicator -->
+          <div id="dialogue-action">
+            <button class="stardew-btn" id="btn-dialogue-action">Lanjut ➡</button>
+            <span class="stardew-heart-indicator" id="dialogue-heart" title="Sentuh untuk lanjut">❤️</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Full Screen Overlay (Title Screen & Day Complete Card) -->
+    <div id="overlay-screen"></div>
+
+    <!-- Black Screen Fade Transition -->
+    <div id="fade-black"></div>
+
+  </div>
+
+  <!-- Game Scripts (Pure Vanilla JS, 100% Offline & iPad Touch Friendly) -->
+  <script src="audio.js"></script>
+  <script src="sprites.js"></script>
+  <script src="backgrounds.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
